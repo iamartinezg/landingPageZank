@@ -48,7 +48,7 @@ p {
 }
 
 .current {
-    border-bottom: 2px solid #20bf6b;
+    border-bottom: 2px solid #E64026;
 }
 
 .boxLogo {
@@ -69,8 +69,8 @@ p {
 .irArriba {
     display: block!important;
     padding: 15px;
-    background: #20be6b;
-    border: 2px solid #20bf6b;
+    background: #E64026;
+    border: 2px solid #E64026;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -89,9 +89,9 @@ p {
 
 .irArriba:hover {
     background: transparent;
-    border: 2px solid #20bf6b;
+    border: 2px solid #E64026;
     transition: all 0.3s ease 0s;
-    color: #20bf6b;
+    color: #E64026;
     padding: 15px;
 }
 
@@ -126,10 +126,11 @@ header {
 .boxHeader .textosHeader {
     width: 42%;
     position: relative;
-    left: 15%;
+    left: 10%;
     transform: translateY(0);
     opacity: 1;
     animation: animacion2 1s ease-out;
+    color: white;
 }
 
 .boxHeader .textosHeader h1 {
@@ -150,19 +151,19 @@ a.botonGetStarted {
     margin-top: 20px;
     color: #fff;
     padding: 8px 20px;
-    background-color: #20bf6b;
+    background-color: #E64026;
     border-radius: 35px;
-    border: 2px solid #20bf6b;
+    border: 2px solid #E64026;
     box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
     transition: all 0.3s ease 0s;
 }
 
 a.botonGetStarted:hover {
-    color: #20bf6b !important;
+    color: #E64026 !important;
     background-color: transparent;
     border-radius: 6px;
     transition: all 0.3s ease 0s;
-    box-shadow: 0px 15px 18px rgba(32, 191, 107, 0.4);
+    box-shadow: 0px 15px 18px #E64026;
     transform: translateY(-6px);
 }
 
@@ -196,7 +197,7 @@ a.botonGetStarted:hover {
 /* ESTILOS NAVBAR */
 
 .navbar {
-    box-shadow: 0 2px 2px -2px #dcdcdc;
+    box-shadow: 0 2px 2px -2px #E64026;
 }
 
 .navbar-brand {
@@ -204,11 +205,11 @@ a.botonGetStarted:hover {
 }
 
 .navbar-brand small {
-    color: #20bf6b;
+    color: #E64026;
 }
 
 .nav-link:hover {
-    border-bottom: 2px solid #20bf6b;
+    border-bottom: 2px solid #E64026;
 }
 
 .navbar-toggler {
@@ -257,7 +258,7 @@ a.botonGetStarted:hover {
 }
 
 .cardFeatures a {
-    color: #02d2b5;
+    color: #E64026;
 }
 
 .cardFeatures:hover {
@@ -266,7 +267,7 @@ a.botonGetStarted:hover {
 }
 
 .cardFeatures span {
-    background: #00d2b5;
+    background: #E64026;
     color: #fff;
     width: 35px;
     height: 35px;
@@ -282,10 +283,17 @@ a.botonGetStarted:hover {
     font-weight: bold;
 }
 
+.cardImage {
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
 .cardFeatures p {
     font-size: 12px;
     color: #9c9c9c;
 }
+
 
 
 /* ESTILOS CALL TO ACTION  */
@@ -478,7 +486,7 @@ a.botonGetStarted:hover {
 }
 
 .carousel-indicators li {
-    background-color: #20bf6b;
+    background-color: #E64026;
 }
 
 .carousel-item {
@@ -515,9 +523,9 @@ a.botonGetStarted:hover {
     margin-top: 20px;
     color: #fff;
     padding: 8px 20px;
-    background-color: #20bf6b;
+    background-color: #E64026;
     border-radius: 35px;
-    border: 2px solid #20bf6b;
+    border: 2px solid #E64026;
     box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
     transition: all 0.3s ease 0s;
 }
@@ -780,4 +788,44 @@ a.botonGetStarted:hover {
         justify-content: center;
         text-align: center;
     }
+    /** Footer **/
+
+.footer-section{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-footer-section{
+  padding: 1rem 0;
+}
+
+.wrap-social-logos ul, .wrap-menu-footer-section ul{
+  display: flex;
+  justify-content: center;
+}
+
+.social-logo{
+  max-width: 75px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.wrap-menu-footer-section ul li{
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+.footer-creds{
+  display: flex;
+  justify-content: center;
+}
+.cardImage {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Esquinas redondeadas */
+    margin-bottom: 15px; /* Espacio inferior para separar la imagen del contenido siguiente */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}
+
 }
