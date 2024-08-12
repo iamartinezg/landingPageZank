@@ -1,6 +1,6 @@
 *,
- ::after,
- ::before {
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -67,7 +67,7 @@ p {
 }
 
 .irArriba {
-    display: block!important;
+    display: block !important;
     padding: 15px;
     background: #E64026;
     border: 2px solid #E64026;
@@ -81,10 +81,10 @@ p {
     bottom: 50px;
     right: 2%;
     z-index: 999;
-    transition: all 0.3s ease 0s!important;
+    transition: all 0.3s ease 0s !important;
     transform: translateX(0);
     animation: animacionScrollTo 0.7s ease-out;
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
 .irArriba:hover {
@@ -124,7 +124,7 @@ header {
 }
 
 .boxHeader .textosHeader {
-    width: 42%;
+    width: 100%;
     position: relative;
     left: 10%;
     transform: translateY(0);
@@ -134,14 +134,14 @@ header {
 }
 
 .boxHeader .textosHeader h1 {
-    font-size: 50px;
+    font-size: 60px;
     width: 55%;
 }
 
 .boxHeader .textosHeader p {
-    width: 65%;
+    width: 90%;
     color: #9c9c9c;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 a.botonGetStarted {
@@ -221,7 +221,7 @@ a.botonGetStarted:hover {
 }
 
 .bg-light {
-    background-color: #ffffff!important;
+    background-color: #ffffff !important;
 }
 
 
@@ -230,27 +230,37 @@ a.botonGetStarted:hover {
 .boxFeatures {
     padding: 50px;
     background-color: #f6f6f6;
-    height: 100vh;
+    /* Elimina o comenta la línea siguiente para que la altura se ajuste al contenido */
+    /* height: 100vh; */
+    min-height: 100vh;
 }
 
 .features {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px; /* Añade un espacio uniforme entre los elementos */
     max-width: 1000px;
     width: 90%;
     margin: auto;
-    overflow: hidden;
-    margin-top: 40px;
+    /* Puedes añadir un margen inferior si es necesario */
+    margin-bottom: 20px;
 }
 
 .cardFeatures {
     background: #ffffff;
-    width: 30%;
+    width: calc(33% - 20px);
+    /* Ajusta el ancho a un tercio menos el margen */
     border-radius: 3px;
     padding: 1.25rem;
     transition: 0.4s;
     margin-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .cardFeatures span {
@@ -285,8 +295,17 @@ a.botonGetStarted:hover {
 
 .cardImage {
     width: 100%;
-    border-radius: 3px;
-    margin-bottom: 1rem;
+    /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    margin-bottom: 15px;
+    /* Espacio inferior para separar la imagen del contenido siguiente */
+    object-fit: cover;
+    /* Asegura que la imagen cubra completamente el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra suave */
 }
 
 .cardFeatures p {
@@ -429,6 +448,7 @@ a.botonGetStarted:hover {
     -webkit-box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
+
 }
 
 .imgAbout img {
@@ -442,7 +462,7 @@ a.botonGetStarted:hover {
 }
 
 .contenidoAbout h3 {
-    font-size: 30px;
+    font-size: 35px;
     text-align: left;
     margin-bottom: 20px;
 }
@@ -531,11 +551,11 @@ a.botonGetStarted:hover {
 }
 
 .botonEnviarMensaje:hover {
-    color: #20bf6b !important;
+    color: #E64026 !important;
     background-color: transparent;
     border-radius: 6px;
     transition: all 0.3s ease 0s;
-    box-shadow: 0px 15px 18px rgba(32, 191, 107, 0.4);
+    box-shadow: 0px 15px 18px #E64026;
     transform: translateY(-6px);
 }
 
@@ -567,12 +587,12 @@ a.botonGetStarted:hover {
 }
 
 .boxTextFooter p a:hover {
-    color: #20be6b;
+    color: #E64026;
     transition: 0.4s;
 }
 
 .boxTextFooter span {
-    color: #20be6b;
+    color: #E64026;
 }
 
 
@@ -582,23 +602,29 @@ a.botonGetStarted:hover {
     .boxLogo {
         display: none;
     }
+
     /* ESTILOS NAVBAR */
     .navbar-brand {
         display: block;
     }
+
     .nav-link:hover {
         border-bottom: none;
     }
+
     .nav-item {
         text-align: center;
     }
+
     .current {
         border-bottom: 2px solid #f5f5f5;
     }
+
     /* ESTILOS HEADER */
     header {
         height: auto;
     }
+
     .boxHeader {
         flex-wrap: wrap;
         height: 900px;
@@ -607,6 +633,7 @@ a.botonGetStarted:hover {
         justify-content: center;
         width: 100%;
     }
+
     .boxHeader .textosHeader {
         width: 90%;
         margin-bottom: 100px;
@@ -614,17 +641,21 @@ a.botonGetStarted:hover {
         left: 0;
         margin: 0 auto;
     }
+
     .boxHeader h1 {
         font-size: 40px;
     }
+
     .boxHeader .textosHeader h1 {
         width: 100%;
     }
+
     .boxHeader .textosHeader p {
         width: 100%;
         margin: 0 auto;
         text-align: left;
     }
+
     .boxHeader .imgHeader {
         width: 100%;
         top: -40px;
@@ -633,88 +664,111 @@ a.botonGetStarted:hover {
         justify-content: center;
         align-items: center;
     }
+
     .imgHeader img {
         width: 95%;
     }
+
     /* ESTILOS FEATURES */
     .boxFeatures {
         justify-content: center;
         align-items: center;
         height: 100%;
     }
+
     .features {
-        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        /* Añade un espacio uniforme entre los elementos */
     }
+
     .cardFeatures {
         width: 100%;
         margin-bottom: 1rem;
     }
+
     /* ESTILOS CALL TO ACTIONS */
     .boxCallToActions {
         height: 100%;
     }
+
     .imgCallToActions {
         width: 100%;
     }
+
     .contenido {
         width: 80%;
         padding-left: 0px;
     }
+
     .contenido h3 {
         text-align: center;
     }
+
     .contenido p {
         width: 100%;
         text-align: center;
     }
+
     .contenido ul {
         text-align: center;
     }
+
     .boxCardAnimated {
         position: relative;
         right: 0vh;
         transform: none;
         animation: none;
     }
+
     .boxCardCallToActions {
         width: 100%;
         margin-top: 42px;
     }
+
     /* ESTILOS ABOUT */
     .boxAbout {
         height: 100%;
     }
+
     .about {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    .imgAbout {
-        width: 100%;
-    }
+
+    
+
     .contenidoAbout {
         width: 100%;
         padding-left: 0;
         text-align: center;
         margin-top: 40px;
     }
+
     .contenidoAbout h3 {
         text-align: center;
         margin-bottom: 20px;
     }
+
     .contenidoAbout p {
         width: 100%;
         text-align: center;
     }
+
     /* ESTILOS TESTIMONIAL */
     .boxSlider {
         height: 100%;
     }
+
     /* ESTILOS CONTACTO */
     .contacto {
         background: white;
         width: 90%;
         margin: 30px auto 0 auto;
     }
+
     /* ESTILOS FOOTER */
     .boxContacto {
         height: 100%;
@@ -725,62 +779,78 @@ a.botonGetStarted:hover {
     .boxLogo {
         display: none;
     }
+
     .current {
         border-bottom: 2px solid #f5f5f5;
     }
+
     h3 {
         font-size: 25px;
     }
+
     /* ESTILOS NAVBAR */
     .navbar-brand {
         display: block;
     }
+
     .nav-link:hover {
         border-bottom: none;
     }
+
     .nav-item {
         text-align: center;
     }
+
     /* ESTILOS HEADER */
     .boxHeader {
         height: 700px;
     }
+
     .boxHeader .textosHeader {
         width: 90%;
     }
+
     .boxHeader h1 {
         font-size: 25px;
     }
+
     .boxHeader h2 {
         font-size: 20px;
         font-weight: 300;
     }
+
     /* ESTILOS FEATURES */
     .features {
         width: 100%;
     }
+
     /* ESTILOS CALL TO ACTIONS */
     .boxCallToActions {
         height: 100%;
     }
+
     .boxCardAnimated {
         position: relative;
         right: 0vh;
         transform: none;
         animation: none;
     }
+
     /* ESTILOS ABOUT */
     .about {
         width: 100%;
     }
+
     /* ESTILOS CONTACTO */
     .boxContacto {
         padding: 50px 30px;
     }
+
     .contacto {
         width: 100%;
         margin: 0;
     }
+
     /* ESTILOS FOOTER */
     footer {
         flex-wrap: wrap;
@@ -788,44 +858,54 @@ a.botonGetStarted:hover {
         justify-content: center;
         text-align: center;
     }
+
     /** Footer **/
 
-.footer-section{
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    .footer-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-.menu-footer-section{
-  padding: 1rem 0;
-}
+    .menu-footer-section {
+        padding: 1rem 0;
+    }
 
-.wrap-social-logos ul, .wrap-menu-footer-section ul{
-  display: flex;
-  justify-content: center;
-}
+    .wrap-social-logos ul,
+    .wrap-menu-footer-section ul {
+        display: flex;
+        justify-content: center;
+    }
 
-.social-logo{
-  max-width: 75px;
-  width: 100%;
-  padding: 1rem;
-}
+    .social-logo {
+        max-width: 75px;
+        width: 100%;
+        padding: 1rem;
+    }
 
-.wrap-menu-footer-section ul li{
-  font-size: 1.1rem;
-  padding: 1.5rem;
-}
+    .wrap-menu-footer-section ul li {
+        font-size: 1.1rem;
+        padding: 1.5rem;
+    }
 
-.footer-creds{
-  display: flex;
-  justify-content: center;
-}
-.cardImage {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 8px; /* Esquinas redondeadas */
-    margin-bottom: 15px; /* Espacio inferior para separar la imagen del contenido siguiente */
-    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
-}
+    .footer-creds {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cardImage {
+        width: 100%;
+        /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: auto;
+        /* Mantiene la proporción de la imagen */
+        border-radius: 8px;
+        /* Esquinas redondeadas */
+        margin-bottom: 15px;
+        /* Espacio inferior para separar la imagen del contenido siguiente */
+        object-fit: cover;
+        /* Asegura que la imagen cubra completamente el contenedor */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Añade una sombra suave */
+    }
+    
 
 }
