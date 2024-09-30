@@ -20,7 +20,7 @@ window.onscroll = function() {
     }
 
 };
-
+$('.carousel').carousel()
 
 // AGREGA CLASE current AL HACER SCROLL 
 let mainNavLinks = document.querySelectorAll("nav div ul li a");

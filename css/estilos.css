@@ -25,7 +25,7 @@ a:hover {
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
@@ -109,7 +109,7 @@ header {
     height: 700px;
     width: 100%;
     position: relative;
-    background-color: black;
+    
     padding-top: 55px;
 }
 
@@ -227,12 +227,12 @@ a.botonGetStarted:hover {
 
 /* ESTILOS FEATURES */
 
+/* ESTILOS FEATURES */
 .boxFeatures {
-    padding: 50px;
-    background-color: #f6f6f6;
-    /* Elimina o comenta la línea siguiente para que la altura se ajuste al contenido */
-    /* height: 100vh; */
-    min-height: 100vh;
+    padding: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .features {
@@ -695,9 +695,11 @@ a.botonGetStarted:hover {
 
     /* ESTILOS FEATURES */
     .boxFeatures {
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        padding: 50px;
+        background-color: #f6f6f6;
+        /* Elimina o comenta la línea siguiente para que la altura se ajuste al contenido */
+        /* height: 100vh; */
+        min-height: 100vh;
     }
 
     .features {
@@ -916,20 +918,71 @@ a.botonGetStarted:hover {
         justify-content: center;
     }
 
-    .cardImage {
-        width: 100%;
-        /* Ajusta el ancho de la imagen al 100% del contenedor */
-        height: auto;
-        /* Mantiene la proporción de la imagen */
-        border-radius: 8px;
-        /* Esquinas redondeadas */
-        margin-bottom: 15px;
-        /* Espacio inferior para separar la imagen del contenido siguiente */
-        object-fit: cover;
-        /* Asegura que la imagen cubra completamente el contenedor */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Añade una sombra suave */
-    }
+
     
 
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el carrusel */
+.carousel {
+    margin-top: 0px; /* Ajusta según la altura de tu navbar */
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Asegura que la imagen se ajuste al contenedor */
+    object-fit: cover; /* Mantiene las proporciones de la imagen */
+    border-radius: 0; /* Elimina cualquier borde redondeado */
+}
+
+/* Ajustes de texto y botones dentro del carrusel */
+.textosHeader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ajusta el ancho del contenedor de texto */
+    overflow: visible; /* Asegura que el contenido no se corte */
+}
+
+/* Botones de acción */
+.botonGetStarted {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.botonGetStarted:hover {
+    background-color: #ff4b3a; /* Color de fondo al pasar el mouse */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel {
+        
+        margin-top: 0; /* Eliminar el margen superior */
+    }
+
+    
 }
